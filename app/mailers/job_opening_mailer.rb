@@ -7,14 +7,11 @@ class JobOpeningMailer < ApplicationMailer
         body += "Email: #{user_data.email}\n"
         body += "Phone Number: #{user_data.phone}\n"
         body += "Address: #{user_data[:address]}\n"
-        body += "Job Number: #{user_data.job_no}\n"
-        body += "Additional Information: #{user_data.add_info}\n"
+        body += "Additional Information: #{user_data.text_info}\n"
         body += "Education: #{user_data.education}\n"
         body += "Skills: #{user_data.skills}\n"
         body += "Total Experience: #{user_data.total_exp}\n"
         body += "Personal Quality: #{user_data.personal_quality}\n"
-        body += "File: #{user_data.file}\n"
-        body += "Desired work: #{user_data.desired_work}\n"
       end
     end
   end  

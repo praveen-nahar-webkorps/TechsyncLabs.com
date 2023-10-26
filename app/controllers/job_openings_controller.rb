@@ -18,7 +18,7 @@ class JobOpeningsController < ApplicationController
   private
 
   def jobOpening_params
-    params.permit(:first_name, :last_name, :email, :phone, :address, :job_no, :add_info, :education, :skills, :total_exp, :personal_quality, :file, :desired_work)
+    params.permit(:first_name, :last_name, :email, :phone, :address, :education, :skills, :total_exp, :personal_quality, :text_info)
   end
   
 end
