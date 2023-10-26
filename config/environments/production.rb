@@ -85,17 +85,16 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
 
-  # # For development environment
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address: 'smtp.gmail.com',
     port: 587,
-    domain: 'webkorps.com', # Replace with your domain
-    user_name: 'praveen@webkorps.com', # Your Gmail email address
-    password: '*****', # Your Gmail password (or an App Password)
+    domain: 'gmail.com', # Replace with your domain
+    user_name: 'praveennahar00@gmail.com', # Your Gmail email address
+    password: 'oypu hupu ovfj whpm', # Your Gmail password (or an App Password)
     authentication: 'plain',
     enable_starttls_auto: true
   }
 
-  config.action_mailer.default_url_options = { host: 'your_production_host_here' }
+  # config.action_mailer.default_url_options = { host: 'your_production_host_here' }
 end

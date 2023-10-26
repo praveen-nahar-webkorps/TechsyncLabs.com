@@ -4,8 +4,8 @@ class JobOpeningsController < ApplicationController
 
     if @jobOpening.save
       begin
-        UserMailer.admin_email(@jobOpening).deliver_now         # Send email to admin
-        UserMailer.user_email(params[:email]).deliver_now    # Send email to user
+        JobOpeningMailer.admin_email(@jobOpening).deliver_now         # Send email to admin
+        JobOpeningMailer.user_email(params[:email]).deliver_now    # Send email to user
         render json:{data: @jobOpening, message: "Emails sent successfully" }, status: :ok
       rescue StandardError => e
         render json: { message: "Error sending email to admin: #{e.message}" }, status: :internal_server_error
