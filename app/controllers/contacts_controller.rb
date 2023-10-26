@@ -6,7 +6,7 @@ class ContactsController < ApplicationController
       begin
         ContactMailer.admin_email(@contact).deliver_now         # Send email to admin
         ContactMailer.user_email(params[:email]).deliver_now    # Send email to user
-        render json:{data: @contact, message: "Emails sent successfully" }, status: :ok
+        render json:{data: @contact, message: "Email sent successfully" }, status: :ok
       rescue StandardError => e
         render json: { message: "Error sending email to admin: #{e.message}" }, status: :internal_server_error
       end

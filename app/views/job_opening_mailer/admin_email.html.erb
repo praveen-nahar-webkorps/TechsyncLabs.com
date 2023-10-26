@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Job Inquiry from Candidate</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      background-color: #f6f9fc;
+      color: #333;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border: 2px solid #dce6f0;
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    p {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .footer img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Applicants Information</h1>
+    <p><strong>Name:</strong> <%= @user_data[:first_name] %> <%= @user_data[:last_name] %></p>
+    <p><strong>Email:</strong> <%= @user_data[:email] %></p>
+    <p><strong>Phone Number:</strong> <%= @user_data[:phone] %></p>
+    <p><strong>Address:</strong> <%= @user_data[:address] %></p>
+    <p><strong>Additional Information:</strong> <%= @user_data[:text_info] %></p>
+    <p><strong>Education:</strong> <%= @user_data[:education] %></p>
+    <p><strong>Skills:</strong> <%= @user_data[:skills] %></p>
+    <p><strong>Total Experience:</strong> <%= @user_data[:total_exp] %></p>
+    <p><strong>Personal Quality:</strong> <%= @user_data[:personal_quality] %></p>
+  </div>
+</body>
+</html>
