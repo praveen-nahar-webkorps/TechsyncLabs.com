@@ -7,6 +7,6 @@ class ContactMailer < ApplicationMailer
   end
     
   def user_email(user_email)
-    mail(from: 'praveennahar00@gmail.com', to: user_email, subject: 'Thank You for Contacting Us!')
+    mail(from: 'blueflame@admin.com', to: user_email, subject: 'Thank You for Contacting Us!')
   end
 end

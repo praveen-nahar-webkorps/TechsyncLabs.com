@@ -49,3 +49,5 @@ end
 
 gem 'letter_opener', group: :development 
 
+gem 'google-api-client'
+gem 'googleauth'
