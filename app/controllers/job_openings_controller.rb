@@ -1,4 +1,7 @@
 class JobOpeningsController < ApplicationController
+  require 'google/apis/sheets_v4'
+  require 'googleauth'
+  
   def create
     @jobOpening = JobOpening.new(jobOpening_params)
 
